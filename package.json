@@ -1,0 +1,27 @@
+{
+  "name": "@ynewtime/ts-lib",
+  "version": "0.1.0",
+  "description": "Example repo of writing a typescript library.",
+  "main": "dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "stub": "unbuild --stub",
+    "build": "unbuild",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "unbuild": "^1.0.2"
+  }
+}
