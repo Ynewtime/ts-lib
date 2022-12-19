@@ -1,6 +1,6 @@
 {
   "name": "@ynewtime/ts-lib",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Example repo of writing a typescript library.",
   "type": "module",
   "exports": {
@@ -19,6 +19,7 @@
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "simple-git-hooks",
     "prettier": "prettier --cache --write --ignore-unknown .",
     "lint": "eslint --cache --fix --ext .ts,.js,.mjs,.cjs .",
     "stub": "unbuild --stub",
